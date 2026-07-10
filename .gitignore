@@ -1,13 +1,13 @@
-# تجاهل مجلدات PyCharm
+# ignore pycharm folders
 .idea/
 
-# تجاهل البيئة الافتراضية
+# ignore virtual enviroment
 venv/
 bin/
 lib/
 include/
 pyvenv.cfg
 
-# تجاهل ملفات النظام
+# ignore system files
 __pycache__/
 .DS_Store
