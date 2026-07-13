@@ -10,3 +10,8 @@ Clinical Significance: How does the frequency of these variants correlate with t
 Predictive Indicators: I expect to identify specific genomic markers or "warning signs" that predict whether a genetic variant is likely to result in a conflicting interpretation before it is even classified.
 Laboratory Discrepancy Map: An insight into whether discrepancies are distributed uniformly across the genome or concentrated in specific high-complexity regions.
 Recommendation Potential: Understanding the root causes of these conflicts could lead to insights on how to improve clinical diagnostic standards, providing a "data-driven" rationale for why certain interpretations reach a consensus while others remain contested.
+
+### Target Variable Definition (CLASS)
+Based on the dataset documentation:
+- **Class 0 (Concordant):** Represents variants where clinical laboratories are in agreement regarding the classification.
+- **Class 1 (Conflicting):** Represents variants where clinical laboratories have provided conflicting classifications.
