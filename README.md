@@ -24,8 +24,8 @@ Our exploratory data analysis of the ClinVar variant classifications provided se
 * **Target Distribution:** The dataset presents an imbalanced distribution (75% Concordant vs. 25% Conflicting). We will account for this during model training using class-balancing techniques to ensure fair predictive performance.
 * **Feature Relationships:** Analysis of feature correlations identified redundancy among certain numerical genomic features. These insights guide our feature selection process to focus on the most impactful variables for classification.
 
-* لـ README الخاص بمشروعك. تم تصنيف كل عمود بناءً على أهميته في موديل "التنبؤ بالتضارب" (Conflict Detection).
-Feature Engineering & Data Preparation Plan
+
+* **Feature Engineering & Data Preparation Plan
 1. Keep & Scale (Numerical Features)
 These are critical predictive features. They should be kept as-is and scaled (e.g., using StandardScaler) because they measure the functional impact and population frequency, which are key sources of disagreement among labs.
 AF_ESP, AF_EXAC, AF_TGP: Population allele frequencies. Disagreement often arises when labs use different thresholds or datasets for variant rarity.
