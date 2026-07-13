@@ -15,3 +15,11 @@ Recommendation Potential: Understanding the root causes of these conflicts could
 Based on the dataset documentation:
 - **Class 0 (Concordant):** Represents variants where clinical laboratories are in agreement regarding the classification.
 - **Class 1 (Conflicting):** Represents variants where clinical laboratories have provided conflicting classifications.
+
+## Analysis Findings
+
+Our exploratory data analysis of the ClinVar variant classifications provided several key insights:
+
+* **Data Cleaning Strategy:** We identified extensive missing data in over 80% of specific genomic features. Consequently, we implemented a data-cleaning strategy to drop these irrelevant columns, ensuring a cleaner dataset for training.
+* **Target Distribution:** The dataset presents an imbalanced distribution (75% Concordant vs. 25% Conflicting). We will account for this during model training using class-balancing techniques to ensure fair predictive performance.
+* **Feature Relationships:** Analysis of feature correlations identified redundancy among certain numerical genomic features. These insights guide our feature selection process to focus on the most impactful variables for classification.
