@@ -24,3 +24,5 @@ Our exploratory data analysis of the ClinVar variant classifications provided se
 * **Target Distribution:** The dataset presents an imbalanced distribution (75% Concordant vs. 25% Conflicting). We will account for this during model training using class-balancing techniques to ensure fair predictive performance.
 * **Feature Relationships:** Analysis of feature correlations identified redundancy among certain numerical genomic features. These insights guide our feature selection process to focus on the most impactful variables for classification.
 
+آث
+<img width="1440" height="900" alt="Screenshot 1448-01-29 at 12 07 39 PM" src="https://github.com/user-attachments/assets/493d4901-56ca-4767-817c-209ec6a3eb11" />
