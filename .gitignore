@@ -1,5 +1,6 @@
-# ignore pycharm folders
+# ignore editor folders
 .idea/
+.vscode/
 
 # ignore virtual enviroment
 venv/
