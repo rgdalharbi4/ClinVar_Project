@@ -38,6 +38,16 @@ Full reasoning for each step is documented in `notebooks/02_data_cleaning.ipynb`
 - **Best model:** Random Forest (`class_weight='balanced'`) — ROC-AUC 0.79, 75% recall on the Conflicting class.
 - **Strongest predictor:** mean allele frequency (`mean_af`), followed by CADD pathogenicity score (`cadd_phred`) — rarer, more pathogenic-looking variants are more likely to have conflicting interpretations.
 
+## Limitations & Future Work
+
+- **Label reflects lab behavior, not ground truth:** "conflicting" depends on which labs happened to submit interpretations for a variant, not an objective measure of pathogenicity — a variant can be "concordant" simply because only one lab ever classified it.
+- **Heavy missingness in dropped columns:** several raw features were missing 60-99% of values and were dropped rather than imputed; some of that discarded data (e.g. `SIFT`/`PolyPhen` predictions) could carry real signal a future version could try to recover instead of dropping.
+- **Label/ordinal encoding on high-cardinality columns:** `symbol`, `feature`, `codons`, and `amino_acids` were label-encoded, which imposes an arbitrary numeric order with no biological meaning. Tree-based models tolerate this reasonably well, but it isn't ideal.
+- **Moderate model performance:** ROC-AUC 0.79 is a solid baseline but not clinical-grade; no hyperparameter tuning or cross-validation was performed (a single train/test split), so the reported metrics carry some uncertainty.
+- **Static, dated snapshot:** the dataset reflects ClinVar submissions from several years ago — clinical variant interpretations evolve as new evidence emerges, so conflicts flagged here may since have been resolved in the real database.
+
+**Recommendations for future analysis:** hyperparameter tuning with cross-validation, testing gradient-boosted models (XGBoost/LightGBM) against the Random Forest baseline, and revisiting the dropped high-missingness columns with more targeted imputation instead of removal.
+
 ## Dashboard Features
 
 The Streamlit dashboard (`app.py`) is a dark-themed, interactive explorer built on the cleaned dataset and the trained model.
