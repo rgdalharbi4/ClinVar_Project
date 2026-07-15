@@ -3,6 +3,7 @@
 
 # تجاهل البيئة الافتراضية
 venv/
+.venv/
 bin/
 lib/
 include/
