@@ -38,6 +38,22 @@ Full reasoning for each step is documented in `notebooks/02_data_cleaning.ipynb`
 - **Best model:** Random Forest (`class_weight='balanced'`) — ROC-AUC 0.79, 75% recall on the Conflicting class.
 - **Strongest predictor:** mean allele frequency (`mean_af`), followed by CADD pathogenicity score (`cadd_phred`) — rarer, more pathogenic-looking variants are more likely to have conflicting interpretations.
 
+## Dashboard Features
+
+The Streamlit dashboard (`app.py`) is a dark-themed, interactive explorer built on the cleaned dataset and the trained model.
+
+**Sidebar filters** (batched into a form — adjust several, then hit "Apply Filters" for one refresh):
+- Chromosome (multiselect)
+- Impact: MODIFIER/LOW/MODERATE/HIGH (multiselect)
+- CADD_PHRED range (slider)
+- Class: Concordant/Conflicting (multiselect)
+
+**Sections:**
+- **Overview** — filtered data preview, summary statistics, and a class distribution donut chart
+- **Explore** — univariate (histogram, boxplot, countplot) and bivariate/multivariate (scatter, bar, correlation heatmap) charts, switchable via dropdowns
+- **Predict** — a live what-if tool: move sliders for CADD score, allele frequency, LoFtool, disease count, and impact, then get a real-time prediction from the trained Random Forest, shown on a confidence gauge
+- **Insights** — key findings from the analysis as styled cards
+
 ## Project Structure
 
 ```
