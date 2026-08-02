@@ -99,7 +99,7 @@ pip install -r requirements.txt
 ```bash
 streamlit run app.py
 ```
-
+https://clinvarproject.streamlit.app
 ## Running the Notebooks
 
 Open any notebook in `notebooks/` with Jupyter/JupyterLab and run top to bottom:
