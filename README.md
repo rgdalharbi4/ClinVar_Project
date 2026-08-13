@@ -112,4 +112,4 @@ Run them in order (`01` → `04`) since each stage builds on the CSV produced by
 
 ## Author
 
-**Raghad Alharbi** — Tuwaiq Academy, Data Science & AI Bootcamp
+**Raghad Alharbi** — Tuwaiq Academy, Data Science & AI Bootcamp, 2026
